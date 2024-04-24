@@ -61,7 +61,7 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) {
   
-    return NULL;
+    HashMap->capacity = capacity;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
