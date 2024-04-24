@@ -129,3 +129,27 @@ hashmap.c:67:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 fa8614c
+Wed 24 Apr 2024 10:15:34 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:14: error: invalid initializer
+   45 |   Pair par = createPair(key, value);
+      |              ^~~~~~~~~~
+hashmap.c:47:59: error: comparison between pointer and integer [-Werror]
+   47 |   if (map->buckets[pos] == NULL || map->buckets[pos]->key == -1){
+      |                                                           ^~
+hashmap.c: In function ‘createMap’:
+hashmap.c:66:3: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+   66 |   return;
+      |   ^~~~~~
+hashmap.c:62:11: note: declared here
+   62 | HashMap * createMap(long capacity) {
+      |           ^~~~~~~~~
+hashmap.c:63:11: error: variable ‘mapa’ set but not used [-Werror=unused-but-set-variable]
+   63 |   HashMap mapa;
+      |           ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e252d3d

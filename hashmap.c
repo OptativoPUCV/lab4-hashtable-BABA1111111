@@ -63,7 +63,7 @@ HashMap * createMap(long capacity) {
   HashMap mapa;
 
   mapa.capacity = capacity;
-  return mapa->capacity;
+  return;
 }
 
 
