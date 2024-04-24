@@ -90,3 +90,21 @@ hashmap.c:67:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 1d46aad
+Wed 24 Apr 2024 10:15:19 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:14: error: invalid initializer
+   45 |   Pair par = createPair(key, value);
+      |              ^~~~~~~~~~
+hashmap.c:47:59: error: comparison between pointer and integer [-Werror]
+   47 |   if (map->buckets[pos] == NULL || map->buckets[pos]->key == -1){
+      |                                                           ^~
+hashmap.c: In function ‘createMap’:
+hashmap.c:66:14: error: returning ‘long int’ from a function with return type ‘HashMap *’ {aka ‘struct HashMap *’} makes pointer from integer without a cast [-Werror=int-conversion]
+   66 |   return mapa.capacity;
+      |          ~~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c380fba
