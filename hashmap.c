@@ -60,10 +60,9 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-  HashMap mapa;
-
-  mapa.capacity = capacity;
-  return;
+  HashMap* mapa = (HashMap) malloc (sizeof(mapa));
+  mapa->capacity = capacity;
+  return mapa;
 }
 
 
