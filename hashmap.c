@@ -60,10 +60,12 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-  
-    HashMap->capacity = capacity;
-  return capacity;
+  HashMap mapa;
+
+  mapa.capacity = capacity;
+  return mapa;
 }
+
 
 void eraseMap(HashMap * map,  char * key) {    
 

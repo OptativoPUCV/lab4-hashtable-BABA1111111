@@ -69,3 +69,24 @@ hashmap.c:65:10: error: returning ‘long int’ from a function with return typ
 cc1: all warnings being treated as errors
 Compilation failed
 34220d0
+Wed 24 Apr 2024 10:15:07 PM UTC: 
+ hashmap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:14: error: invalid initializer
+   45 |   Pair par = createPair(key, value);
+      |              ^~~~~~~~~~
+hashmap.c:47:59: error: comparison between pointer and integer [-Werror]
+   47 |   if (map->buckets[pos] == NULL || map->buckets[pos]->key == -1){
+      |                                                           ^~
+hashmap.c: In function ‘createMap’:
+hashmap.c:66:10: error: incompatible types when returning type ‘HashMap’ {aka ‘struct HashMap’} but ‘HashMap *’ {aka ‘struct HashMap *’} was expected
+   66 |   return mapa;
+      |          ^~~~
+hashmap.c:67:1: error: control reaches end of non-void function [-Werror=return-type]
+   67 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1d46aad
