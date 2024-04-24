@@ -171,3 +171,21 @@ hashmap.c:63:3: error: conversion to non-scalar type requested
 cc1: all warnings being treated as errors
 Compilation failed
 0973f16
+Wed 24 Apr 2024 10:17:05 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:14: error: invalid initializer
+   45 |   Pair par = createPair(key, value);
+      |              ^~~~~~~~~~
+hashmap.c:47:59: error: comparison between pointer and integer [-Werror]
+   47 |   if (map->buckets[pos] == NULL || map->buckets[pos]->key == -1){
+      |                                                           ^~
+hashmap.c: In function ‘createMap’:
+hashmap.c:63:3: error: conversion to non-scalar type requested
+   63 |   HashMap* mapa = (HashMap) malloc (sizeof(HashMap));
+      |   ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e9379a9
