@@ -102,7 +102,6 @@ void eraseMap(HashMap * map,  char * key) {
     }
   }
   map->current = NULL;
-  return NULL;
 
 }
 // struct HashMap {

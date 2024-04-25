@@ -994,3 +994,32 @@ hashmap.c:86:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 5720d8b
+Thu 25 Apr 2024 09:54:50 PM UTC: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:90:20: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   90 |       map->current = NULL;
+      |                    ^
+hashmap.c:91:26: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   91 |       return map->buckets[valorHash];
+      |              ~~~~~~~~~~~~^~~~~~~~~~~
+hashmap.c:86:6: note: declared here
+   86 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+hashmap.c:95:22: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   95 |         map->current = NULL;
+      |                      ^
+hashmap.c:96:28: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   96 |         return map->buckets[valorHash];
+      |                ~~~~~~~~~~~~^~~~~~~~~~~
+hashmap.c:86:6: note: declared here
+   86 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+hashmap.c:104:16: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  104 |   map->current = NULL;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+2ad4b1e
