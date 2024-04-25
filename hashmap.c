@@ -107,7 +107,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   map->current = valorHash;
   
   
-    return map->bucket->key;
+    return map->buckets[valorHash];
 }
 
 Pair * firstMap(HashMap * map) {
