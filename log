@@ -230,3 +230,14 @@ hashmap.c:69:10: error: variable ‘nuevoPar’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 f9f1bcd
+Thu 25 Apr 2024 02:26:24 AM UTC: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:69:10: error: unused variable ‘nuevoPar’ [-Werror=unused-variable]
+   69 |   Pair** nuevoPar = (Pair**) malloc(sizeof(Pair*) * capacity);
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7f6cb21

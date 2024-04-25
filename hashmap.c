@@ -67,10 +67,10 @@ void enlarge(HashMap * map) {
 HashMap * createMap(long capacity) {
   HashMap* mapa = malloc (sizeof(HashMap));
   Pair** nuevoPar = (Pair**) malloc(sizeof(Pair*) * capacity);
+  
   mapa->size = 0;
   mapa->capacity = capacity;
   mapa->current = 0;
-  nuevoPar = 0;
   
   return mapa;
 }
