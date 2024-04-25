@@ -100,7 +100,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   if (strcmp(map->buckets[valorHash]->key,key)==0){
       map->current = valorHash;
       return map->buckets[valorHash];
-    } else {
+  } else {
     while(map->buckets[valorHash] != NULL){
       if (valorHash == map->capacity - 1){
         valorHash = 0;
@@ -108,6 +108,8 @@ Pair * searchMap(HashMap * map,  char * key) {
       valorHash++;
     }
   }
+  map->current = valorHash;
+  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
