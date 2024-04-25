@@ -48,6 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   long valorHash = hash(key, map->capacity);
   map->buckets[valorHash] = nuevoPar;
+  map->current = nuevoPar;
   map->size += 1;
   
 }
@@ -85,8 +86,9 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
+  long valorHash = hash(key, map->capacity);
 
-
+  
     return NULL;
 }
 

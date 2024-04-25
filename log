@@ -595,3 +595,18 @@ Thu 25 Apr 2024 03:23:50 AM UTC:
  tests:  2|5
 total_score: 20/70
 248d115
+Thu 25 Apr 2024 03:25:36 AM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:51:16: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   51 |   map->current = nuevoPar;
+      |                ^
+hashmap.c: In function ‘searchMap’:
+hashmap.c:89:8: error: unused variable ‘valorHash’ [-Werror=unused-variable]
+   89 |   long valorHash = hash(key, map->capacity);
+      |        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0e19601
