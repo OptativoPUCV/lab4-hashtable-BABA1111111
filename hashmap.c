@@ -103,9 +103,9 @@ Pair * searchMap(HashMap * map,  char * key) {
       valorHash = 0;
     }
     else{
-      valorHash++;
+      //valorHash++;
     }
-    // valorHash++;
+    valorHash++;
   }
   
   
