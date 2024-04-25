@@ -792,3 +792,17 @@ hashmap.c:101:12: error: returning ‘char *’ from a function with incompatibl
 cc1: all warnings being treated as errors
 Compilation failed
 3443ef6
+Thu 25 Apr 2024 03:44:42 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:101:5: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  101 |     return ;
+      |     ^~~~~~
+hashmap.c:94:8: note: declared here
+   94 | Pair * searchMap(HashMap * map,  char * key) {
+      |        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7b4fac7
