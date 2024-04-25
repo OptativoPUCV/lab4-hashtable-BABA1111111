@@ -102,6 +102,10 @@ Pair * searchMap(HashMap * map,  char * key) {
       return map->buckets[valorHash];
   } else {
     while(map->buckets[valorHash] != NULL){
+      if (strcmp(map->buckets[valorHash]->key,key)==0){
+        map->current = valorHash;
+        return map->buckets[valorHash];
+      }
       if (valorHash == map->capacity - 1){
         valorHash = 0;
       }
