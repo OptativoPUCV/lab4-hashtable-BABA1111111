@@ -105,23 +105,13 @@ Pair * searchMap(HashMap * map,  char * key) {
       valorHash++;
     }
   }
-  // while(strcmp(map->buckets[valorHash]->key, key) != 0 && map->buckets[valorHash] != NULL){
-  //   if (valorHash == map->capacity - 1){
-  //     valorHash = 0;
-  //   }
-  //   else{
-  //     //valorHash++;
-  //   }
-  //   valorHash++;
-  // }
-  
   
   map->current = valorHash;
   
-  if (map->buckets[valorHash] == NULL){
-    return NULL;
-  }
+  if (strcmp(map->buckets[valorHash]->key,key)!=0){
     return map->buckets[valorHash];
+  }
+    return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
