@@ -57,11 +57,20 @@ void enlarge(HashMap * map) {
 
 
 }
-
+// struct HashMap {
+//     Pair ** buckets;
+//     long size; //cantidad de datos/pairs en la tabla
+//     long capacity; //capacidad de la tabla
+//     long current; //indice del ultimo dato accedido
+// };
 
 HashMap * createMap(long capacity) {
   HashMap* mapa = malloc (sizeof(HashMap));
+  Pair** nuevoPar = (Pair**) malloc(sizeof(Pair*) * capacity);
+  mapa->size = 0;
   mapa->capacity = capacity;
+  mapa->current = 0;
+  
   return mapa;
 }
 
