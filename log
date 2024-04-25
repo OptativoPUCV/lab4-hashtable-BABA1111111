@@ -741,3 +741,20 @@ hashmap.c:99:12: error: returning ‘long int’ from a function with return typ
 cc1: all warnings being treated as errors
 Compilation failed
 a58a450
+Thu 25 Apr 2024 03:32:04 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:95:10: error: expected expression before ‘=’ token
+   95 |   valor* = map->buckets[i]->key;
+      |          ^
+hashmap.c:99:18: error: expected expression before ‘;’ token
+   99 |     return valor*;
+      |                  ^
+hashmap.c:100:1: error: control reaches end of non-void function [-Werror=return-type]
+  100 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+b8eece4

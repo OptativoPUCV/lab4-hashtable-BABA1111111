@@ -88,15 +88,15 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * searchMap(HashMap * map,  char * key) {   
   long valorHash = hash(key, map->capacity);
-  long valor = 0;
+  long* valor = 0;
 
 for (long i = 0; i < map->capacity; i++){
   map->current = valorHash;
-  valor = map->buckets[i]->key;
+  valor* = map->buckets[i]->key;
 }
   
   
-    return valor;
+    return valor*;
 }
 
 Pair * firstMap(HashMap * map) {
