@@ -73,7 +73,7 @@ HashMap * createMap(long capacity) {
   mapa->current = 0;
 
   for (int i = 0; i < capacity; i++){
-    mapa->buckets[i] = NULL;
+    mapa->buckets[i] = 0;
   }
   return mapa;
 }
