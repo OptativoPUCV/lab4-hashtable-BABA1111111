@@ -98,12 +98,14 @@ Pair * searchMap(HashMap * map,  char * key) {
   
   long valorHash = hash(key, map->capacity);
 
-  while(map->buckets[valorHash] != NULL){
+  while(map->buckets[valorHash]->key != key){
     if (valorHash == map->capacity - 1){
       valorHash = 0;
     }
     valorHash++;
   }
+  
+  
   map->current = valorHash;
   
   
