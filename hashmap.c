@@ -97,16 +97,23 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {   
   
   long valorHash = hash(key, map->capacity);
-  
-  while(strcmp(map->buckets[valorHash]->key, key) != 0 && map->buckets[valorHash] != NULL){
-    if (valorHash == map->capacity - 1){
-      valorHash = 0;
+  if (strcmp(map->buckets[valorHash]->key,key)!=0){
+    while(map->buckets[valorHash] != NULL){
+      if (valorHash == map->capacity - 1){
+        valorHash = 0;
+      }
+      valorHash++;
     }
-    else{
-      //valorHash++;
-    }
-    valorHash++;
   }
+  // while(strcmp(map->buckets[valorHash]->key, key) != 0 && map->buckets[valorHash] != NULL){
+  //   if (valorHash == map->capacity - 1){
+  //     valorHash = 0;
+  //   }
+  //   else{
+  //     //valorHash++;
+  //   }
+  //   valorHash++;
+  // }
   
   
   map->current = valorHash;
