@@ -241,3 +241,9 @@ hashmap.c:69:10: error: unused variable ‘nuevoPar’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 7f6cb21
+Thu 25 Apr 2024 02:32:36 AM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+1ccc143
