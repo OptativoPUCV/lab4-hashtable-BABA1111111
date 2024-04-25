@@ -571,3 +571,9 @@ hashmap.c:44:37: error: ‘Par’ undeclared (first use in this function); did y
 hashmap.c:44:37: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 3c5e08e
+Thu 25 Apr 2024 03:19:55 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+a528c6a

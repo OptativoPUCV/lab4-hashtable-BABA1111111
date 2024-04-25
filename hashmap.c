@@ -41,7 +41,7 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
   Pair* nuevoPar;
-  nuevoPar = (Pair*) malloc (sizeof(Par));
+  nuevoPar = (Pair*) malloc (sizeof(Pair));
 
   nuevoPar->key = key;
   nuevoPar->value = value;
