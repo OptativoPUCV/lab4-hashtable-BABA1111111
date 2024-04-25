@@ -638,3 +638,9 @@ hashmap.c:90:8: error: unused variable ‘valorHash’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d679834
+Thu 25 Apr 2024 03:27:26 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|5
+total_score: 20/70
+032de16

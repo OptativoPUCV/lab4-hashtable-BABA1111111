@@ -87,7 +87,7 @@ void eraseMap(HashMap * map,  char * key) {
 // };
 
 Pair * searchMap(HashMap * map,  char * key) {   
-  long valorHash = hash(key, map->capacity);
+  // long valorHash = hash(key, map->capacity);
 
   
   
