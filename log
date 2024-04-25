@@ -676,3 +676,14 @@ hashmap.c:97:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 81d0d47
+Thu 25 Apr 2024 03:28:50 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:96:12: error: returning ‘HashMap *’ {aka ‘struct HashMap *’} from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   96 |     return map;
+      |            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+3103f75
