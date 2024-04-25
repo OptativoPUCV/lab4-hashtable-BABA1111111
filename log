@@ -661,3 +661,18 @@ hashmap.c:96:15: error: returning ‘long int’ from a function with return typ
 cc1: all warnings being treated as errors
 Compilation failed
 002e72d
+Thu 25 Apr 2024 03:28:42 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:96:15: error: ‘map’ is a pointer; did you mean to use ‘->’?
+   96 |     return map.current;
+      |               ^
+      |               ->
+hashmap.c:97:1: error: control reaches end of non-void function [-Werror=return-type]
+   97 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+81d0d47

@@ -93,7 +93,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
   
   
-    return map->current;
+    return map.current;
 }
 
 Pair * firstMap(HashMap * map) {
