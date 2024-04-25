@@ -559,3 +559,15 @@ hashmap.c:44:19: error: expected expression before ‘)’ token
       |                   ^
 Compilation failed
 26dcee9
+Thu 25 Apr 2024 03:19:48 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:37: error: ‘Par’ undeclared (first use in this function); did you mean ‘Pair’?
+   44 |   nuevoPar = (Pair*) malloc (sizeof(Par));
+      |                                     ^~~
+      |                                     Pair
+hashmap.c:44:37: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3c5e08e
