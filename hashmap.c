@@ -48,7 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   long valorHash = hash(key, map->capacity);
   map->buckets[valorHash] = nuevoPar;
-  mapa->current = valorHash;
+  map->current = valorHash;
   map->size += 1;
   
 }
