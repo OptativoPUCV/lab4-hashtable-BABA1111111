@@ -48,7 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   long valorHash = hash(key, map->capacity);
   map->buckets[valorHash] = nuevoPar;
-  map->current = nuevoPar;
+  mapa->current = valorHash;
   map->size += 1;
   
 }
@@ -58,12 +58,7 @@ void enlarge(HashMap * map) {
 
 
 }
-// struct HashMap {
-//     Pair ** buckets;
-//     long size; //cantidad de datos/pairs en la tabla
-//     long capacity; //capacidad de la tabla
-//     long current; //indice del ultimo dato accedido
-// };
+
 
 HashMap * createMap(long capacity) {
   HashMap* mapa = (HashMap*) malloc(sizeof(HashMap));
@@ -84,10 +79,17 @@ void eraseMap(HashMap * map,  char * key) {
 
 
 }
+// struct HashMap {
+//     Pair ** buckets;
+//     long size; //cantidad de datos/pairs en la tabla
+//     long capacity; //capacidad de la tabla
+//     long current; //indice del ultimo dato accedido
+// };
 
 Pair * searchMap(HashMap * map,  char * key) {   
   long valorHash = hash(key, map->capacity);
 
+  
   
     return NULL;
 }
