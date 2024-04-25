@@ -102,7 +102,10 @@ Pair * searchMap(HashMap * map,  char * key) {
     if (valorHash == map->capacity - 1){
       valorHash = 0;
     }
-    valorHash++;
+    else{
+      valorHash++;
+    }
+    // valorHash++;
   }
   
   
