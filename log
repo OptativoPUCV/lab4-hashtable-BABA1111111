@@ -959,3 +959,38 @@ Thu 25 Apr 2024 04:21:16 AM UTC:
  tests:  8|3
 total_score: 40/70
 2db511f
+Thu 25 Apr 2024 09:54:40 PM UTC: 
+ hashmap.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:90:20: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   90 |       map->current = NULL;
+      |                    ^
+hashmap.c:91:26: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   91 |       return map->buckets[valorHash];
+      |              ~~~~~~~~~~~~^~~~~~~~~~~
+hashmap.c:86:6: note: declared here
+   86 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+hashmap.c:95:22: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   95 |         map->current = NULL;
+      |                      ^
+hashmap.c:96:28: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   96 |         return map->buckets[valorHash];
+      |                ~~~~~~~~~~~~^~~~~~~~~~~
+hashmap.c:86:6: note: declared here
+   86 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+hashmap.c:104:16: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  104 |   map->current = NULL;
+      |                ^
+hashmap.c:105:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  105 |   return NULL;
+      |          ^~~~
+hashmap.c:86:6: note: declared here
+   86 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5720d8b
