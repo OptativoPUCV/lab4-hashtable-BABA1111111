@@ -49,6 +49,9 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   long valorHash = hash(key, map->capacity);
   while(map->buckets[valorHash] != NULL){
+    if (valorHash == map->capacity - 1){
+      valorHash = 0;
+    }
     valorHash++;
   }
 
