@@ -98,7 +98,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   
   long valorHash = hash(key, map->capacity);
 
-  while(map->buckets[valorHash]->key != key){
+  while(strcmp(map->buckets[valorHash]->key, key) != 0){
     if (valorHash == map->capacity - 1){
       valorHash = 0;
     }
