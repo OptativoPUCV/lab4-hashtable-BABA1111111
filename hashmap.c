@@ -102,6 +102,7 @@ void eraseMap(HashMap * map,  char * key) {
   }
   }
   map->current = -1;
+  map->size--;
 }
 // struct HashMap {
 //     Pair ** buckets;
