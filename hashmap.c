@@ -95,10 +95,10 @@ void eraseMap(HashMap * map,  char * key) {
       map->current = -1;
       map->buckets[valorHash]->key = NULL;
     }
+    valorHash++;
     if (valorHash == map->capacity - 1){
       valorHash = 0;
     }
-    valorHash++;
   }
   }
   map->current = -1;
