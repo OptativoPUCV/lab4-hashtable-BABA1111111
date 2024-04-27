@@ -134,13 +134,11 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  long i = 0;
-  
-  while(map->buckets[i] != NULL){
-    return map->buckets[i];
-    i++;
+  for (long i = 0; i < map->capacity; i++){
+    if (map->buckets[i] != NULL){
+      return map->buckets[i];
+    }
   }
-  
   return NULL;
 }
 
