@@ -1023,3 +1023,20 @@ hashmap.c:104:16: error: assignment to ‘long int’ from ‘void *’ makes in
 cc1: all warnings being treated as errors
 Compilation failed
 2ad4b1e
+Sat 27 Apr 2024 07:23:09 PM UTC: 
+ hashmap.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:90:20: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   90 |       map->current = NULL;
+      |                    ^
+hashmap.c:94:22: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   94 |         map->current = NULL;
+      |                      ^
+hashmap.c:102:16: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  102 |   map->current = NULL;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+2dbe141
