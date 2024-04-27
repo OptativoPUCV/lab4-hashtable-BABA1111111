@@ -149,11 +149,11 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   
-  if (map->size != 0){
+  if (map->size != 0 && map->current != -1){
     for (long i = map->current; i < map->capacity; i++){
       if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
         map->current = i;
-        return map->buckets[i + 1];
+        return map->buckets[i];
       }
     }
   }
