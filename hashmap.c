@@ -85,12 +85,22 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {    
   long valorHash = hash(key, map->capacity);
-
-  for(long i = 0; i < map->capacity; i++){
+  if (strcmp(map->buckets[valorHash]->key,key)==0){
+    map->buckets[valorHash]->key = NULL;
+  }
+  else{
+  while(map->buckets[valorHash] != NULL){
     if (strcmp(map->buckets[valorHash]->key,key)==0){
+      map->current = NULL;
       map->buckets[valorHash]->key = NULL;
     }
+    if (valorHash == map->capacity - 1){
+      valorHash = 0;
+    }
+    valorHash++;
   }
+  }
+  
 }
 // struct HashMap {
 //     Pair ** buckets;
