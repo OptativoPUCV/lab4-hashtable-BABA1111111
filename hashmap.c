@@ -90,7 +90,7 @@ void eraseMap(HashMap * map,  char * key) {
     if (strcmp(map->buckets[valorHash]->key,key)==0){
       map->buckets[valorHash]->key = NULL;
     }
-    else {
+    else{
     while(map->buckets[valorHash] != NULL){
       if (strcmp(map->buckets[valorHash]->key,key)==0){
         map->current = valorHash;
@@ -99,9 +99,8 @@ void eraseMap(HashMap * map,  char * key) {
         valorHash = 0;
       }
       valorHash++;
-      }
     }
-  }
+
 }
 // struct HashMap {
 //     Pair ** buckets;
