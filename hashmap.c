@@ -62,8 +62,17 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
+  enlarge_called = 1; //no borrar (testing purposes)
 
+  Pair** parAux = map->buckets;
+  map->capacity *= 2;
+  
+  HashMap* nuevoMapa = createMap(map->capacity);
+  nuevoMapa->size = 0;
+  
+  for (long i = 0; i < map->capacity; i++){
+    insertMap(nuevoMapa, parAux[i]->key, parAux[i]->value);
+  }
 
 }
 
