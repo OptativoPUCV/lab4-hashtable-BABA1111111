@@ -1099,3 +1099,17 @@ hashmap.c:86:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 a9ab88b
+Sat 27 Apr 2024 07:46:03 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:97:28: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   97 |         return map->buckets[valorHash];
+      |                ~~~~~~~~~~~~^~~~~~~~~~~
+hashmap.c:86:6: note: declared here
+   86 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+323a246
