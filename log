@@ -1380,3 +1380,24 @@ Sat 27 Apr 2024 11:21:00 PM UTC:
  1 file changed, 9 insertions(+)
  tests:  0|0
 410bd39
+Sat 27 Apr 2024 11:27:44 PM UTC: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:72:38: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   72 |   map->buckets = (Pair**) realloc(map->capacity, sizeof(Pair*));
+      |                                   ~~~^~~~~~~~~~
+      |                                      |
+      |                                      long int
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:29: note: expected ‘void *’ but argument is of type ‘long int’
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+In file included from test.c:4:
+hashmap.c:68:8: error: unused variable ‘capacidadAux’ [-Werror=unused-variable]
+   68 |   long capacidadAux = map->capacity;
+      |        ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6325247
