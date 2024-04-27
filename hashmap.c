@@ -75,7 +75,7 @@ void enlarge(HashMap * map) {
   nuevoMapa->size = 0;
   
   for (long i = 0; i < capacidadAux; i++){
-    insertMap(nuevoMapa, parAux[i]->key, parAux[i]->value);
+    insertMap(map, parAux[i]->key, parAux[i]->value);
   }
 
   free(parAux);
