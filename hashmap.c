@@ -134,6 +134,8 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
+  
+  long i = 0;
   while(map->buckets[i] != NULL){
     return map->buckets[i];
     break;

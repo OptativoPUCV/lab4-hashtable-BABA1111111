@@ -1243,3 +1243,9 @@ hashmap.c:137:22: error: ‘i’ undeclared (first use in this function)
 hashmap.c:137:22: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 735cce9
+Sat 27 Apr 2024 08:18:03 PM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  12|2
+total_score: 50/70
+8100d93
