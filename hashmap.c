@@ -99,9 +99,9 @@ void eraseMap(HashMap * map,  char * key) {
         valorHash = 0;
       }
       valorHash++;
+      }
     }
   }
-
 }
 // struct HashMap {
 //     Pair ** buckets;
