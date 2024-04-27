@@ -102,6 +102,7 @@ void eraseMap(HashMap * map,  char * key) {
     }
   }
 }
+}
 // struct HashMap {
 //     Pair ** buckets;
 //     long size; //cantidad de datos/pairs en la tabla
